@@ -1,8 +1,11 @@
-import { getMessage } from "./actions";
+// app/page.js
 import { Box, Container, Typography, Paper } from "@mui/material";
+import { getMessage } from "./actions";
 
 export default async function Home() {
+  // Fetch the message from the server-side action
   const data = await getMessage();
+
   return (
     <Container
       maxWidth="sm"
