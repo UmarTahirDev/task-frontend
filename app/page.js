@@ -1,11 +1,5 @@
-import axios from "axios";
+import { getMessage } from "./actions";
 import { Box, Container, Typography, Paper } from "@mui/material";
-
-async function getMessage() {
-  const baseUrl = process.env.BACKEND_URL;
-  const res = await axios.get(`${baseUrl}/api/message`);
-  return res.data;
-}
 
 export default async function Home() {
   const data = await getMessage();
